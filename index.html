@@ -7,20 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>导航页面</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="./css/nav-demo-font/iconfont.js"></script>
+    <script src="./css/iconfont/iconfont.js"></script>
 </head>
 
-<body>
+<body class="preview">
     <div id="page">
         <header>
             <div class="search-type">
-                <div class="search-tab">
+                <div data-type="baidu" class="search-tab">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-baidu"></use>
                     </svg>
                     百度
                 </div>
-                <div class="search-tab active">
+                <div data-type="bing" class="search-tab active">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-ms"></use>
                     </svg>
@@ -29,42 +29,84 @@
             </div>
             <div class="search-ipt">
                 <input type="text" placeholder="搜索">
-                <svg class="icon" aria-hidden="true">
+                <svg class="icon icon-search" aria-hidden="true">
                     <use xlink:href="#icon-search"></use>
                 </svg>
             </div>
         </header>
+        <div id="setting">
+            <svg class="icon icon-setting" aria-hidden="true">
+                <use xlink:href="#icon-setting"></use>
+            </svg>
+            <svg class="icon icon-back" aria-hidden="true">
+                <use xlink:href="#icon-fanhui"></use>
+            </svg>
+        </div>
+        <div class="plus">
+            <svg class="icon icon-plus" aria-hidden="true">
+                <use xlink:href="#icon-plus"></use>
+            </svg>
+        </div>
         <main>
-            <ul class="container">
-                <li class="list">
-                    <h2>常用网站🌐</h2>
-                        <ul class="panel">
-                            <li class="tag color-1">B站</li> 
-                            <li class="tag color-2">微博</li>
-                            <li class="tag color-3">知乎</li>
-                            <li class="tag color-1">谷歌</li> 
-                            <li class="tag color-2">掘金</li>
-                        </ul>
+            <ul class="list">
+                <li class="item">
+                    <h2>常用网站</h2>
+                    <!-- <svg class="icon-del" aria-hidden="true">
+                        <use xlink:href="#icon-del"></use>
+                    </svg> -->
+                    <ul class="panel">
+                        <li class="tag">B站</li>
+                        <li class="tag">知乎</li>
+                    </ul>
                 </li>
-                <li class="list">
-                    <h2>学习文档📖</h2>
-                        <ul class="panel">
-                            <li class="tag color-4">vue3.js</li> 
-                            <li class="tag color-5">react.js</li>
-                            <li class="tag color-1">MDN</li>
-                        </ul>
-                </li>
-                <li class="list">
-                    <h2>趁手工具🔧</h2>
-                        <ul class="panel">
-                            <li class="tag color-2">jsdesign.com</li> 
-                            <li class="tag color-3">icontfont</li>
-                            <li class="tag color-4">iconpark</li>
-                        </ul>
+                <li class="item">
+                    <h2>学习文档</h2>
+                    <!-- <svg class="icon del" aria-hidden="true">
+                        <use xlink:href="#icon-del"></use>
+                    </svg> -->
+                    <ul class="panel">
+                        <li class="tag">vue3.js</li>
+                        <li class="tag">react.js</li>
+                        <li class="tag">MDN</li>
+                    </ul>
                 </li>
             </ul>
         </main>
+        <div class="model model1">
+            <h3>输入分类</h3>
+            <div class="field">
+                <input class="modelipt1" type="text" placeholder="输入分类名称" value="">
+            </div>
+            <div class="lyt">
+                <div class="btn confirm">确定</div>
+                <div class="btn cancel">取消</div>
+            </div>
+        </div>
+        <div class="model model2">
+            <h3>输入分类</h3>
+            <div class="field">
+                <input class="modelipt2" type="text" placeholder="输入分类名称" value="">
+            </div>
+            <div class="lyt">
+                <div class="btn confirm">确定</div>
+                <div class="btn cancel">取消</div>
+            </div>
+        </div>
+        <div class="model model3">
+            <h3>添加网站</h3>
+            <div class="field">
+                <input class="site-name" type="text" placeholder="网站名称">
+            </div>
+            <div class="field">
+                <input class="site-url" type="text" placeholder="网站地址">
+            </div>
+            <div class="lyt">
+                <div class="btn confirm">确定</div>
+                <div class="btn cancel">取消</div>
+            </div>
+        </div>
     </div>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
